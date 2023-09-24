@@ -38,5 +38,5 @@ const studentSchema = new mongoose.Schema({
   LearningObjective: String,
 });
 
-const Studentsmodel = new mongoose.model("student", studentSchema);
+const Studentsmodel = new mongoose.model("studentPortal", studentSchema);
 module.exports = Studentsmodel;
