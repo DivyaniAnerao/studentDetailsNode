@@ -31,12 +31,12 @@ const data = fs.readFileSync('./work.json', 'utf8');
               "LearningObjective":fileData.LearningObjective
             })
             
-            mongoose.set('debug',true);
+           // mongoose.set('debug',true);
             let result =  await data1.save();
 
-            mongoose.set('debug',(cal,method,query,doc)=>{
+           /* mongoose.set('debug',(cal,method,query,doc)=>{
                 console.log(JSON.stringify(query))
-                    })
+                    })*/
             console.log(result)
     })
 }
