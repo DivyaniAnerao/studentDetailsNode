@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const mongoUrl = "mongodb://127.0.0.1:27017/snappet";
+//const mongoUrl = "mongodb://127.0.0.1:27017/snappet";
+const mongoUrl = "mongodb+srv://divyanianerao97:divyanianerao97@cluster0.bncoejp.mongodb.net/snappet?retryWrites=true&w=majority";
 //const mongoUrl = process.env.MONGO_URL | "mongodb://127.0.0.1:27017/snappet";
 mongoose
   .connect(mongoUrl, {
@@ -9,7 +10,7 @@ mongoose
   .then(() => {
     console.log("connected to database...!");
   });
-
+  
 const studentSchema = new mongoose.Schema({
   SubmittedAnswerId: {
     type: Number,
