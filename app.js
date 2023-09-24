@@ -1,12 +1,15 @@
-require("dotenv").config();
+//require("dotenv").config();
 const express = require("express");
-const Studentsmodel = require("./mongooseConnect");
+//const Studentsmodel = require("./mongooseConnect");
 const addData = require("./headersMiddleware");
 const app = express();
 const PORT = 3000;
 //const PORT = process.env.PORT | 3000;
 app.use(express.json());
-
+app.get("/students/details/test", addData, async (req, res) => {
+  res.send('Divishal');
+  });
+/*
 app.get("/students/details", addData, async (req, res) => {
   let students = {};
 
@@ -48,7 +51,7 @@ app.get("/students", addData, async (req, res) => {
   }
   res.send(students);
 });
-
+*/
 app.listen(PORT, () => {
   console.log(`Listening on ${PORT}...!`);
 });
