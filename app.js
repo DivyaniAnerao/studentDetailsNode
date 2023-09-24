@@ -3,6 +3,7 @@ const express = require("express");
 const Studentsmodel = require("./mongooseConnect");
 const addData = require("./headersMiddleware");
 const fs = require('fs');
+const mongoose = require("mongoose");
 const app = express();
 const PORT = 3000;
 //const PORT = process.env.PORT | 3000;
@@ -31,13 +32,14 @@ const data = fs.readFileSync('./work.json', 'utf8');
               "LearningObjective":fileData.LearningObjective
             })
             
+            console.log(data1)
            // mongoose.set('debug',true);
-            let result =  await data1.save();
+            /*let result =  await data1.save();
 
-           /* mongoose.set('debug',(cal,method,query,doc)=>{
+            mongoose.set('debug',(cal,method,query,doc)=>{
                 console.log(JSON.stringify(query))
-                    })*/
-            console.log(result)
+                    })
+            console.log(result)*/
     })
 }
 func();
