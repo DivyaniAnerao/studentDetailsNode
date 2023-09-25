@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-//const mongoUrl = "mongodb://127.0.0.1:27017/snappet";
 const mongoUrl = "mongodb+srv://divyanianerao97:divyanianerao97@cluster0.bncoejp.mongodb.net/snappet?retryWrites=true&w=majority";
 //const mongoUrl = process.env.MONGO_URL | "mongodb://127.0.0.1:27017/snappet";
 mongoose
@@ -39,5 +38,5 @@ const studentSchema = new mongoose.Schema({
   LearningObjective: String,
 });
 
-const Studentsmodel = new mongoose.model("studentPortal", studentSchema);
+const Studentsmodel = new mongoose.model("studentportal", studentSchema);
 module.exports = Studentsmodel;
