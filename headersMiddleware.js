@@ -1,5 +1,5 @@
 module.exports = function addData(req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "http://16.16.63.147:5000");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   // Request methods you wish to allow
   res.setHeader(
     "Access-Control-Allow-Methods",
